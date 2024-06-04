@@ -4,8 +4,8 @@ from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 
 default_args = {
-    'owner': 'bsp',
-    'retries': 2,
+    'owner': 'airflow',
+    'retries': 1,
     'retry_delay': timedelta(minutes=1)
 }
 
@@ -13,6 +13,7 @@ with DAG(
     dag_id='dag_runs',
     default_args=default_args,
     start_date=datetime(2023, 3, 25),
+    catchup=False,
     schedule_interval='0 0 * * *'
 ) as dag:
     create_task = PostgresOperator(
