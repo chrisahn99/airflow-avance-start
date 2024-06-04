@@ -40,7 +40,7 @@ with DAG(
     dag_id='dag_runs',
     default_args=default_args,
     start_date=pendulum.datetime(2024, 5, 1, tz="Europe/Paris"),
-    end_date=endulum.datetime(2024, 7, 1, tz="Europe/Paris"),
+    end_date=pendulum.datetime(2024, 7, 1, tz="Europe/Paris"),
     catchup=True,
     schedule_interval='0 12 * * *',
     dagrun_timeout=timedelta(minutes=60)

@@ -1,0 +1,9 @@
+[2024-06-04T13:18:54.304+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T02:24:00+00:00 [queued]>
+[2024-06-04T13:18:54.312+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T02:24:00+00:00 [queued]>
+[2024-06-04T13:18:54.312+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-04T13:18:54.324+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): sleep_sla> on 2024-05-14 02:24:00+00:00
+[2024-06-04T13:18:54.332+0000] {standard_task_runner.py:60} INFO - Started process 412 to run task
+[2024-06-04T13:18:54.335+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_sla_viz', 'sleep_sla', 'scheduled__2024-05-14T02:24:00+00:00', '--job-id', '809', '--raw', '--subdir', 'DAGS_FOLDER/dag_sla_visualization.py', '--cfg-path', '/tmp/tmpz49j7fl5']
+[2024-06-04T13:18:54.337+0000] {standard_task_runner.py:88} INFO - Job 809: Subtask sleep_sla
+[2024-06-04T13:18:54.380+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T02:24:00+00:00 [running]> on host b4b0ed2599ea
+[2024-06-04T13:18:54.451+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_sla_viz' AIRFLOW_CTX_TASK_ID='sleep_sla' AIRFLOW_CTX_EXECUTION_DATE='2024-05-14T02:24:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-14T02:24:00+00:00'

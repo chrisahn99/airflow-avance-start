@@ -1,0 +1,28 @@
+[2024-06-04T13:18:41.427+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T01:46:00+00:00 [queued]>
+[2024-06-04T13:18:41.434+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T01:46:00+00:00 [queued]>
+[2024-06-04T13:18:41.434+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-04T13:18:41.445+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): sleep_sla> on 2024-05-14 01:46:00+00:00
+[2024-06-04T13:18:41.455+0000] {standard_task_runner.py:60} INFO - Started process 352 to run task
+[2024-06-04T13:18:41.458+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_sla_viz', 'sleep_sla', 'scheduled__2024-05-14T01:46:00+00:00', '--job-id', '790', '--raw', '--subdir', 'DAGS_FOLDER/dag_sla_visualization.py', '--cfg-path', '/tmp/tmp246kyvm1']
+[2024-06-04T13:18:41.461+0000] {standard_task_runner.py:88} INFO - Job 790: Subtask sleep_sla
+[2024-06-04T13:18:41.545+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_sla_viz.sleep_sla scheduled__2024-05-14T01:46:00+00:00 [running]> on host b4b0ed2599ea
+[2024-06-04T13:18:41.646+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_sla_viz' AIRFLOW_CTX_TASK_ID='sleep_sla' AIRFLOW_CTX_EXECUTION_DATE='2024-05-14T01:46:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-14T01:46:00+00:00'
+[2024-06-04T13:18:41.648+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag_sla_visualization.py", line 9, in task_sleep_sla
+    time.sleep(20)
+NameError: name 'time' is not defined
+[2024-06-04T13:18:41.657+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=dag_sla_viz, task_id=sleep_sla, execution_date=20240514T014600, start_date=20240604T131841, end_date=20240604T131841
+[2024-06-04T13:18:41.668+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 790 for task sleep_sla (name 'time' is not defined; 352)
+[2024-06-04T13:18:41.711+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-04T13:18:41.736+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
