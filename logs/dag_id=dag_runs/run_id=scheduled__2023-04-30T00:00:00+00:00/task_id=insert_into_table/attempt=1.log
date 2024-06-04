@@ -1,0 +1,5 @@
+[2024-06-04T08:17:40.310+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.insert_into_table scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2024-06-04T08:17:40.601+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.insert_into_table scheduled__2023-04-30T00:00:00+00:00 [queued]>
+[2024-06-04T08:17:40.601+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 3
+[2024-06-04T08:17:41.012+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-06-04T08:17:41.012+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
