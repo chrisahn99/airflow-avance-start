@@ -1,0 +1,162 @@
+[2024-06-04T10:06:14.588+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T10:06:14.600+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T10:06:14.601+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-06-04T10:06:14.689+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): filter_and_log> on 2024-05-16 12:00:00+00:00
+[2024-06-04T10:06:14.703+0000] {standard_task_runner.py:60} INFO - Started process 482 to run task
+[2024-06-04T10:06:14.708+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'filter_and_log', 'scheduled__2024-05-16T12:00:00+00:00', '--job-id', '357', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmptir8p5ow']
+[2024-06-04T10:06:14.710+0000] {standard_task_runner.py:88} INFO - Job 357: Subtask filter_and_log
+[2024-06-04T10:06:15.114+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T10:06:15.687+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='filter_and_log' AIRFLOW_CTX_EXECUTION_DATE='2024-05-16T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-16T12:00:00+00:00'
+[2024-06-04T10:06:15.787+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T10:06:15.898+0000] {dag_runs.py:31} INFO -             dt    dag_id
+0   2023-03-29  dag_runs
+1   2023-03-30  dag_runs
+2   2023-03-27  dag_runs
+3   2023-04-02  dag_runs
+4   2023-03-31  dag_runs
+5   2023-03-28  dag_runs
+6   2023-04-01  dag_runs
+7   2023-03-26  dag_runs
+8   2023-03-25  dag_runs
+9   2023-04-05  dag_runs
+10  2023-04-03  dag_runs
+11  2023-04-04  dag_runs
+12  2023-04-07  dag_runs
+13  2023-04-06  dag_runs
+14  2023-04-08  dag_runs
+15  2023-04-09  dag_runs
+16  2023-04-11  dag_runs
+17  2023-04-10  dag_runs
+18  2023-04-12  dag_runs
+19  2023-04-13  dag_runs
+20  2023-04-14  dag_runs
+21  2023-04-15  dag_runs
+22  2023-04-17  dag_runs
+23  2023-04-16  dag_runs
+24  2023-04-18  dag_runs
+25  2023-04-19  dag_runs
+26  2023-04-20  dag_runs
+27  2023-04-21  dag_runs
+28  2023-04-22  dag_runs
+29  2023-04-23  dag_runs
+30  2023-04-24  dag_runs
+31  2023-04-25  dag_runs
+32  2023-04-27  dag_runs
+33  2023-05-05  dag_runs
+34  2023-05-10  dag_runs
+35  2023-05-12  dag_runs
+36  2023-05-13  dag_runs
+37  2023-05-14  dag_runs
+38  2023-05-15  dag_runs
+39  2023-05-17  dag_runs
+40  2023-05-16  dag_runs
+41  2023-05-18  dag_runs
+42  2023-05-19  dag_runs
+43  2023-05-20  dag_runs
+44  2023-05-21  dag_runs
+45  2023-05-22  dag_runs
+46  2023-05-23  dag_runs
+47  2023-05-24  dag_runs
+48  2023-05-25  dag_runs
+49  2023-05-27  dag_runs
+50  2023-05-26  dag_runs
+51  2023-05-29  dag_runs
+52  2023-05-28  dag_runs
+53  2023-05-30  dag_runs
+54  2023-05-31  dag_runs
+55  2023-06-01  dag_runs
+56  2023-06-02  dag_runs
+57  2023-06-03  dag_runs
+58  2023-06-04  dag_runs
+59  2023-06-06  dag_runs
+60  2023-06-05  dag_runs
+61  2023-06-08  dag_runs
+62  2023-06-07  dag_runs
+63  2023-06-10  dag_runs
+64  2023-04-26  dag_runs
+65  2023-06-09  dag_runs
+66  2023-04-30  dag_runs
+67  2024-06-03  dag_runs
+68  2023-05-01  dag_runs
+69  2023-05-03  dag_runs
+70  2023-05-02  dag_runs
+71  2023-04-28  dag_runs
+72  2023-05-04  dag_runs
+73  2023-04-29  dag_runs
+74  2023-05-09  dag_runs
+75  2023-05-06  dag_runs
+76  2023-05-07  dag_runs
+77  2023-05-08  dag_runs
+78  2023-05-11  dag_runs
+79  2024-05-01  dag_runs
+80  2024-05-05  dag_runs
+81  2024-05-03  dag_runs
+82  2024-05-04  dag_runs
+83  2024-05-07  dag_runs
+84  2024-05-02  dag_runs
+85  2024-05-06  dag_runs
+86  2024-05-09  dag_runs
+87  2024-05-08  dag_runs
+88  2024-05-10  dag_runs
+89  2024-06-04  dag_runs
+90  2024-05-11  dag_runs
+91  2024-05-12  dag_runs
+92  2024-05-13  dag_runs
+93  2024-05-14  dag_runs
+94  2024-05-15  dag_runs
+95  2024-05-16  dag_runs
+[2024-06-04T10:06:15.898+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-04T10:06:15.986+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=filter_and_log, execution_date=20240516T120000, start_date=20240604T100614, end_date=20240604T100615
+[2024-06-04T10:06:16.181+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T10:06:16.684+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-04T12:02:52.827+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T12:02:52.917+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T12:02:52.918+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-06-04T12:02:53.016+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): filter_and_log> on 2024-05-16 12:00:00+00:00
+[2024-06-04T12:02:53.032+0000] {standard_task_runner.py:60} INFO - Started process 509 to run task
+[2024-06-04T12:02:53.120+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'filter_and_log', 'scheduled__2024-05-16T12:00:00+00:00', '--job-id', '504', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmpaxy0wsv3']
+[2024-06-04T12:02:53.121+0000] {standard_task_runner.py:88} INFO - Job 504: Subtask filter_and_log
+[2024-06-04T12:02:53.427+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T12:02:53.933+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='filter_and_log' AIRFLOW_CTX_EXECUTION_DATE='2024-05-16T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-16T12:00:00+00:00'
+[2024-06-04T12:02:54.016+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:02:54.031+0000] {dag_runs.py:33} INFO -            dt    dag_id
+0  2024-05-20  dag_runs
+[2024-06-04T12:02:54.035+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-04T12:02:54.117+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=filter_and_log, execution_date=20240516T120000, start_date=20240604T120252, end_date=20240604T120254
+[2024-06-04T12:02:54.255+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T12:02:54.343+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-04T12:11:46.119+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T12:11:46.216+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [queued]>
+[2024-06-04T12:11:46.217+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-06-04T12:11:46.318+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): filter_and_log> on 2024-05-16 12:00:00+00:00
+[2024-06-04T12:11:46.330+0000] {standard_task_runner.py:60} INFO - Started process 411 to run task
+[2024-06-04T12:11:46.420+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'filter_and_log', 'scheduled__2024-05-16T12:00:00+00:00', '--job-id', '617', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmpp4ao3jcv']
+[2024-06-04T12:11:46.421+0000] {standard_task_runner.py:88} INFO - Job 617: Subtask filter_and_log
+[2024-06-04T12:11:46.731+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.filter_and_log scheduled__2024-05-16T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T12:11:47.419+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='filter_and_log' AIRFLOW_CTX_EXECUTION_DATE='2024-05-16T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-16T12:00:00+00:00'
+[2024-06-04T12:11:47.518+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:11:47.619+0000] {dag_runs.py:33} INFO -             dt    dag_id
+0   2024-06-02  dag_runs
+1   2024-06-01  dag_runs
+2   2024-06-03  dag_runs
+3   2024-05-01  dag_runs
+4   2024-06-04  dag_runs
+5   2024-05-03  dag_runs
+6   2024-05-02  dag_runs
+7   2024-05-04  dag_runs
+8   2024-05-06  dag_runs
+9   2024-05-05  dag_runs
+10  2024-05-07  dag_runs
+11  2024-05-08  dag_runs
+12  2024-05-09  dag_runs
+13  2024-05-11  dag_runs
+14  2024-05-10  dag_runs
+15  2024-05-12  dag_runs
+16  2024-05-13  dag_runs
+17  2024-05-14  dag_runs
+18  2024-05-15  dag_runs
+19  2024-05-16  dag_runs
+[2024-06-04T12:11:47.619+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-04T12:11:47.719+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=filter_and_log, execution_date=20240516T120000, start_date=20240604T121146, end_date=20240604T121147
+[2024-06-04T12:11:47.955+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T12:11:48.627+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,81 @@
+[2024-06-04T10:05:20.484+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T10:05:20.505+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T10:05:20.506+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-06-04T10:05:20.588+0000] {taskinstance.py:2217} INFO - Executing <Task(PostgresOperator): delete_data_from_table> on 2024-05-03 12:00:00+00:00
+[2024-06-04T10:05:20.605+0000] {standard_task_runner.py:60} INFO - Started process 237 to run task
+[2024-06-04T10:05:20.687+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'delete_data_from_table', 'scheduled__2024-05-03T12:00:00+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmp0a9xmo_z']
+[2024-06-04T10:05:20.693+0000] {standard_task_runner.py:88} INFO - Job 279: Subtask delete_data_from_table
+[2024-06-04T10:05:21.208+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T10:05:21.883+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='delete_data_from_table' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T12:00:00+00:00'
+[2024-06-04T10:05:21.885+0000] {sql.py:276} INFO - Executing: 
+            delete from dag_runs where dt = '2024-05-03' and dag_id = 'dag_runs';
+        
+[2024-06-04T10:05:21.900+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T10:05:22.089+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T10:05:22.102+0000] {sql.py:457} INFO - Running statement: 
+            delete from dag_runs where dt = '2024-05-03' and dag_id = 'dag_runs';
+        , parameters: None
+[2024-06-04T10:05:22.104+0000] {sql.py:466} INFO - Rows affected: 0
+[2024-06-04T10:05:22.105+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:407: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))
+
+[2024-06-04T10:05:22.194+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=delete_data_from_table, execution_date=20240503T120000, start_date=20240604T100520, end_date=20240604T100522
+[2024-06-04T10:05:22.385+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T10:05:22.484+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-06-04T10:05:22.594+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-04T12:01:51.924+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T12:01:52.119+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T12:01:52.119+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-06-04T12:01:52.220+0000] {taskinstance.py:2217} INFO - Executing <Task(PostgresOperator): delete_data_from_table> on 2024-05-03 12:00:00+00:00
+[2024-06-04T12:01:52.320+0000] {standard_task_runner.py:60} INFO - Started process 241 to run task
+[2024-06-04T12:01:52.324+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'delete_data_from_table', 'scheduled__2024-05-03T12:00:00+00:00', '--job-id', '418', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmpiojkzzv3']
+[2024-06-04T12:01:52.325+0000] {standard_task_runner.py:88} INFO - Job 418: Subtask delete_data_from_table
+[2024-06-04T12:01:53.216+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T12:01:54.226+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='delete_data_from_table' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T12:00:00+00:00'
+[2024-06-04T12:01:54.227+0000] {sql.py:276} INFO - Executing: 
+            delete from dag_runs
+        
+[2024-06-04T12:01:54.420+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:01:54.616+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:01:54.624+0000] {sql.py:457} INFO - Running statement: 
+            delete from dag_runs
+        , parameters: None
+[2024-06-04T12:01:54.715+0000] {sql.py:466} INFO - Rows affected: 0
+[2024-06-04T12:01:54.716+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:407: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))
+
+[2024-06-04T12:01:54.818+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=delete_data_from_table, execution_date=20240503T120000, start_date=20240604T120151, end_date=20240604T120154
+[2024-06-04T12:01:55.118+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T12:01:55.325+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-06-04T12:01:55.532+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-04T12:10:58.437+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T12:10:58.519+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [queued]>
+[2024-06-04T12:10:58.520+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 4
+[2024-06-04T12:10:58.624+0000] {taskinstance.py:2217} INFO - Executing <Task(PostgresOperator): delete_data_from_table> on 2024-05-03 12:00:00+00:00
+[2024-06-04T12:10:58.637+0000] {standard_task_runner.py:60} INFO - Started process 243 to run task
+[2024-06-04T12:10:58.717+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'dag_runs', 'delete_data_from_table', 'scheduled__2024-05-03T12:00:00+00:00', '--job-id', '562', '--raw', '--subdir', 'DAGS_FOLDER/dag_runs.py', '--cfg-path', '/tmp/tmpxm0nja2i']
+[2024-06-04T12:10:58.721+0000] {standard_task_runner.py:88} INFO - Job 562: Subtask delete_data_from_table
+[2024-06-04T12:10:59.017+0000] {task_command.py:423} INFO - Running <TaskInstance: dag_runs.delete_data_from_table scheduled__2024-05-03T12:00:00+00:00 [running]> on host d20949f126de
+[2024-06-04T12:10:59.435+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_runs' AIRFLOW_CTX_TASK_ID='delete_data_from_table' AIRFLOW_CTX_EXECUTION_DATE='2024-05-03T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-03T12:00:00+00:00'
+[2024-06-04T12:10:59.436+0000] {sql.py:276} INFO - Executing: 
+            delete from dag_runs where dt = '2024-05-03' and dag_id = 'dag_runs';
+        
+[2024-06-04T12:10:59.522+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:10:59.622+0000] {base.py:83} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2024-06-04T12:10:59.636+0000] {sql.py:457} INFO - Running statement: 
+            delete from dag_runs where dt = '2024-05-03' and dag_id = 'dag_runs';
+        , parameters: None
+[2024-06-04T12:10:59.639+0000] {sql.py:466} INFO - Rows affected: 0
+[2024-06-04T12:10:59.716+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/providers/common/sql/hooks/sql.py:407: AirflowProviderDeprecationWarning: Call to deprecated method _make_common_data_structure. (The `_make_serializable` method is deprecated and support will be removed in a future version of the common.sql provider. Please update the DbApiHook's provider to a version based on common.sql >= 1.9.1.)
+  result = self._make_common_data_structure(handler(cur))
+
+[2024-06-04T12:10:59.818+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=dag_runs, task_id=delete_data_from_table, execution_date=20240503T120000, start_date=20240604T121058, end_date=20240604T121059
+[2024-06-04T12:10:59.935+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-04T12:11:00.028+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/models/baseoperator.py:1201: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-06-04T12:11:00.132+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
